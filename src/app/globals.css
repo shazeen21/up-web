@@ -3,31 +3,65 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: var(--font-sans);
+  color: #111827;
+  background-color: #ebe5da;
 }
 
+::selection {
+  background: #ffe7b8;
+  color: #1f2937;
+}
+
+/* Typography base */
+@layer base {
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Utilities */
 @layer utilities {
+
+  /* UNIVERSAL RESPONSIVE CONTAINER */
+  .container-responsive {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12;
+  }
+
   .text-balance {
     text-wrap: balance;
+  }
+
+  .card-shadow {
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(14px);
+  }
+}
+
+/* Large screen readability boost */
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 1536px) {
+  html {
+    font-size: 17px;
   }
 }
