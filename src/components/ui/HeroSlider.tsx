@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 type HeroSliderProps = {
   images: string[];
   tone?: "home" | "uphaar" | "kyddoz" | "festive";
-  height?: string;
 };
 
 const toneBorders: Record<NonNullable<HeroSliderProps["tone"]>, string> = {
@@ -16,7 +15,7 @@ const toneBorders: Record<NonNullable<HeroSliderProps["tone"]>, string> = {
   festive: "from-[#8A8DB0] to-[#6e7190]",
 };
 
-export function HeroSlider({ images, tone = "home", height = "520px" }: HeroSliderProps) {
+export function HeroSlider({ images, tone = "home", className = "h-[300px] sm:h-[400px] md:h-[520px]" }: Omit<HeroSliderProps, "height"> & { className?: string }) {
   const [active, setActive] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const touchStart = useRef<number | null>(null);
@@ -38,8 +37,7 @@ export function HeroSlider({ images, tone = "home", height = "520px" }: HeroSlid
 
   return (
     <div
-      className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${toneBorders[tone]} shadow-soft`}
-      style={{ height }}
+      className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${toneBorders[tone]} shadow-soft ${className}`}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       onTouchStart={(e) => (touchStart.current = e.touches[0].clientX)}
@@ -55,9 +53,8 @@ export function HeroSlider({ images, tone = "home", height = "520px" }: HeroSlid
       {images.map((image, idx) => (
         <div
           key={image}
-          className={`absolute inset-0 transition-opacity duration-700 ${
-            idx === active ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 transition-opacity duration-700 ${idx === active ? "opacity-100" : "opacity-0"
+            }`}
         >
           <Image
             src={image}
@@ -97,9 +94,8 @@ export function HeroSlider({ images, tone = "home", height = "520px" }: HeroSlid
             key={idx}
             aria-label={`Go to slide ${idx + 1}`}
             onClick={() => setActive(idx)}
-            className={`h-2.5 rounded-full transition-all duration-300 ${
-              idx === active ? "w-8 bg-white" : "w-3 bg-white/60"
-            }`}
+            className={`h-2.5 rounded-full transition-all duration-300 ${idx === active ? "w-8 bg-white" : "w-3 bg-white/60"
+              }`}
           />
         ))}
       </div>

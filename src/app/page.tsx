@@ -96,7 +96,7 @@ export default function HomePage() {
               <Link href={brand.href}>
                 <motion.div
                   className="group relative overflow-hidden rounded-3xl
-                             bg-[#fffdf8] px-6 sm:px-8 py-8
+                             bg-[#fffdf8] px-5 sm:px-8 py-6 sm:py-8
                              shadow-soft transition
                              border-2 border-[#691314]/40"
                   whileHover={{
@@ -106,7 +106,7 @@ export default function HomePage() {
                   }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="flex min-h-[200px] flex-col items-center justify-between text-center text-[#670E10]">
+                  <div className="flex min-h-[160px] sm:min-h-[200px] flex-col items-center justify-between text-center text-[#670E10]">
                     <motion.div
                       className="flex items-center justify-center"
                       whileHover={{ scale: 1.05 }}
@@ -114,8 +114,8 @@ export default function HomePage() {
                     >
                       <div
                         className={`relative ${brand.size === "large"
-                          ? "h-28 w-56 sm:h-32 sm:w-64 md:h-36 md:w-72"
-                          : "h-24 w-48 sm:h-28 sm:w-56 md:h-32 md:w-64"
+                          ? "h-20 w-40 sm:h-32 sm:w-64 md:h-36 md:w-72"
+                          : "h-16 w-32 sm:h-28 sm:w-56 md:h-32 md:w-64"
                           }`}
                       >
                         <Image
