@@ -70,7 +70,7 @@ export function Footer({ theme = "home" }: FooterProps) {
               <div className="mt-2 space-y-1">
                 <p className="font-medium">sachin@uphaar.net</p>
                 <p className="font-medium">kyddozworld2@gmail.com</p>
-                <p className="font-medium">+91 87671 74252 / +91 87671 74252</p>
+                <p className="font-medium">+91 87671 74252 / +91 98211 41072</p>
               </div>
             )}
           </div>
