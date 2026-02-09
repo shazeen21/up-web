@@ -152,7 +152,7 @@ export function ProductCard({ product, tone = "home" }: ProductCardProps) {
           {product.name}
         </h3>
 
-        {product.price > 0 && tone !== "uphaar" && (
+        {product.price > 0 && tone !== "uphaar" && tone !== "home" && (
           <p className="mt-1 text-lg font-bold" style={{ color: style.text }}>
             ₹{product.price.toLocaleString("en-IN")}
           </p>

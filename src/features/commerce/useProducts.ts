@@ -7,6 +7,16 @@ import {
 } from "@/data/products";
 
 export function useProducts(brand?: Product["brand"]) {
+  if (brand === "uphaar") {
+    return { products: uphaarCollection };
+  }
+  if (brand === "kyddoz") {
+    return { products: kyddozCollection };
+  }
+  if (brand === "festive") {
+    return { products: festiveCollection };
+  }
+
   const allProducts: Product[] = [
     ...featuredProducts,
     ...uphaarCollection,
@@ -14,9 +24,5 @@ export function useProducts(brand?: Product["brand"]) {
     ...festiveCollection,
   ];
 
-  const products = brand
-    ? allProducts.filter((p) => p.brand === brand)
-    : allProducts;
-
-  return { products };
+  return { products: allProducts };
 }

@@ -29,6 +29,13 @@ const getSafeJSON = (key: string, fallback: any) => {
   }
 };
 
+import {
+  featuredProducts,
+  uphaarCollection,
+  kyddozCollection,
+  festiveCollection,
+} from "@/data/products";
+
 export function CommerceProvider({ children }: { children: React.ReactNode }) {
   const [cart, setCart] = useState<CartItem[]>(() =>
     getSafeJSON("cart", [])
@@ -37,6 +44,21 @@ export function CommerceProvider({ children }: { children: React.ReactNode }) {
   const [wishlist, setWishlist] = useState<string[]>(() =>
     getSafeJSON("wishlist", [])
   );
+
+  /* ---------- VALIDATE DATE ON MOUNT ---------- */
+  useEffect(() => {
+    const allIds = new Set([
+      ...featuredProducts.map((p) => p.id),
+      ...uphaarCollection.map((p) => p.id),
+      ...kyddozCollection.map((p) => p.id),
+      ...festiveCollection.map((p) => p.id),
+    ]);
+
+    setWishlist((prev) => {
+      const valid = prev.filter((id) => allIds.has(id));
+      return valid.length !== prev.length ? valid : prev;
+    });
+  }, []);
 
   /* ---------- PERSIST TO LOCALSTORAGE ---------- */
   useEffect(() => {
