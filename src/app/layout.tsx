@@ -16,7 +16,7 @@ const display = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Festive Commerce UI",
+  title: "GIFTING & Co.",
   description:
     "Pixel-perfect, fully responsive ecommerce UI built from Figma references.",
 };

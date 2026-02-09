@@ -60,7 +60,7 @@ export function Footer({ theme = "home" }: FooterProps) {
             {/* KYDDOZ CONTACT */}
             {theme === "kyddoz" && (
               <div className="mt-2 space-y-1">
-                <p className="font-medium">sachin@uphaar.net</p>
+                <p className="font-medium">kyddozworld2@gmail.com</p>
                 <p className="font-medium">+91 87671 74252</p>
               </div>
             )}
@@ -69,7 +69,8 @@ export function Footer({ theme = "home" }: FooterProps) {
             {theme === "home" && (
               <div className="mt-2 space-y-1">
                 <p className="font-medium">sachin@uphaar.net</p>
-                <p className="font-medium">+91 87671 74252 / +91 74985 22255</p>
+                <p className="font-medium">kyddozworld2@gmail.com</p>
+                <p className="font-medium">+91 87671 74252 / +91 87671 74252</p>
               </div>
             )}
           </div>
