@@ -179,6 +179,16 @@ export function Navbar({ theme = "home" }: NavbarProps) {
                 <button
                   onClick={() => {
                     setShowUserMenu(false);
+                    router.push("/profile");
+                  }}
+                  className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 text-gray-700"
+                >
+                  👤 My Profile
+                </button>
+
+                <button
+                  onClick={() => {
+                    setShowUserMenu(false);
                     router.push("/admin");
                   }}
                   className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 text-gray-700"
