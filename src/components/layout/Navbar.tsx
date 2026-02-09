@@ -78,168 +78,172 @@ export function Navbar({ theme = "home" }: NavbarProps) {
   };
 
   return (
-    <header className={`${themeBg[theme]} sticky top-0 z-30 border-b border-black/5`}>
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-10">
+    <>
+      <header className={`${themeBg[theme]} fixed top-0 w-full z-40 border-b border-black/5 shadow-sm transition-all duration-300`}>
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-3 py-2 sm:px-4 sm:py-3 lg:px-10 lg:py-4">
 
-        {/* HAMBURGER BUTTON (Mobile/Tablet) */}
-        <button
-          className="lg:hidden p-2 -ml-2 text-current hover:opacity-80 transition-opacity"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? <XIcon /> : <MenuIcon />}
-        </button>
-
-        {/* LOGOS */}
-        <div className="flex items-center gap-4 lg:gap-8 animate-in fade-in slide-in-from-top-4 duration-700">
-          <div className="relative h-16 w-32 md:h-20 md:w-48 lg:h-24 lg:w-60 hover:scale-105 transition-transform duration-300">
-            <Image
-              src="/logos/uphaar.png"
-              alt="Uphaar"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-          <div className="relative h-16 w-32 md:h-20 md:w-48 lg:h-24 lg:w-60 hover:scale-105 transition-transform duration-300">
-            <Image
-              src="/logos/kyddoz.png"
-              alt="Kyddoz"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-        </div>
-
-        {/* LINKS (Desktop) */}
-        <nav className="hidden items-center gap-8 text-lg font-semibold lg:flex">
-          {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="hover:opacity-80 transition"
-            >
-              {l.label}
-            </Link>
-          ))}
-        </nav>
-
-        {/* ICON BUTTONS */}
-        <div className="flex items-center gap-2 lg:gap-3">
-          <Link href="/wishlist" className={iconBtn}>
-            <HeartIcon />
-            {mounted && wishlistCount > 0 && (
-              <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">
-                {wishlistCount}
-              </span>
-            )}
-          </Link>
-
-          <button className={iconBtn} onClick={handleCartClick} title="View Cart">
-            <BagIcon />
-            {mounted && cartCount > 0 && (
-              <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">
-                {cartCount}
-              </span>
-            )}
+          {/* HAMBURGER BUTTON (Mobile/Tablet) */}
+          <button
+            className="lg:hidden p-1 -ml-1 text-current hover:opacity-80 transition-opacity"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <XIcon /> : <MenuIcon />}
           </button>
 
-          <div className="relative flex items-center gap-3">
-            <button
-              className={`${iconBtn} ${!user ? "ring-2 ring-red-400 animate-pulse" : ""
-                }`}
-              onClick={handleUserClick}
-              title={user ? "User Menu" : "Click to Login"}
-            >
-              <UserIcon />
-            </button>
-
-            {!user && (
-              <span
-                className="hidden md:block text-base font-semibold text-[#670E10] cursor-pointer hover:underline"
-                onClick={handleUserClick}
-              >
-                Login
-              </span>
-            )}
-
-            {user && showUserMenu && (
-              <div
-                className="absolute right-0 top-14 z-50 min-w-[220px] rounded-lg bg-white shadow-xl border border-gray-200 py-2"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <div className="px-4 py-2 border-b border-gray-100">
-                  <p className="text-xs text-gray-500">Logged in as:</p>
-                  <p className="text-sm font-semibold text-gray-900 truncate">
-                    {user.email}
-                  </p>
-                </div>
-
-                <button
-                  onClick={() => {
-                    setShowUserMenu(false);
-                    router.push("/profile");
-                  }}
-                  className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 text-gray-700"
-                >
-                  👤 My Profile
-                </button>
-
-                <button
-                  onClick={() => {
-                    setShowUserMenu(false);
-                    router.push("/admin");
-                  }}
-                  className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 text-gray-700"
-                >
-                  🛠️ Admin Panel
-                </button>
-
-                <button
-                  onClick={() => {
-                    setShowUserMenu(false);
-                    signOut();
-                  }}
-                  className="w-full px-4 py-2 text-left text-sm hover:bg-red-50 text-red-600"
-                >
-                  🚪 Logout
-                </button>
-              </div>
-            )}
+          {/* LOGOS */}
+          <div className="flex items-center gap-2 lg:gap-8 animate-in fade-in slide-in-from-top-4 duration-700">
+            <div className="relative h-9 w-20 sm:h-12 sm:w-24 md:h-16 md:w-32 lg:h-24 lg:w-60 hover:scale-105 transition-transform duration-300">
+              <Image
+                src="/logos/uphaar.png"
+                alt="Uphaar"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            <div className="relative h-9 w-20 sm:h-12 sm:w-24 md:h-16 md:w-32 lg:h-24 lg:w-60 hover:scale-105 transition-transform duration-300">
+              <Image
+                src="/logos/kyddoz.png"
+                alt="Kyddoz"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
           </div>
-        </div>
-      </div>
 
-      {/* MOBILE MENU */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 animate-in slide-in-from-top-2 duration-200">
-          <nav className="flex flex-col p-4 gap-4">
+          {/* LINKS (Desktop) */}
+          <nav className="hidden items-center gap-8 text-lg font-semibold lg:flex">
             {links.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-lg font-semibold text-gray-800 hover:text-red-700 py-2 border-b border-gray-50 last:border-0"
-                onClick={() => setMobileMenuOpen(false)}
+                className="hover:opacity-80 transition"
               >
                 {l.label}
               </Link>
             ))}
-            {!user && (
-              <button
-                onClick={(e) => {
-                  setMobileMenuOpen(false);
-                  handleUserClick(e);
-                }}
-                className="text-lg font-semibold text-left text-[#670E10] py-2"
-              >
-                Login
-              </button>
-            )}
           </nav>
+
+          {/* ICON BUTTONS */}
+          <div className="flex items-center gap-1 sm:gap-2 lg:gap-3">
+            <Link href="/wishlist" className="flex size-9 sm:size-11 items-center justify-center rounded-full bg-white text-[#670E10] shadow-md ring-1 ring-black/10 transition hover:scale-105 cursor-pointer relative">
+              <HeartIcon />
+              {mounted && wishlistCount > 0 && (
+                <span className="absolute -right-1 -top-1 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">
+                  {wishlistCount}
+                </span>
+              )}
+            </Link>
+
+            <button className="flex size-9 sm:size-11 items-center justify-center rounded-full bg-white text-[#670E10] shadow-md ring-1 ring-black/10 transition hover:scale-105 cursor-pointer relative" onClick={handleCartClick} title="View Cart">
+              <BagIcon />
+              {mounted && cartCount > 0 && (
+                <span className="absolute -right-1 -top-1 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">
+                  {cartCount}
+                </span>
+              )}
+            </button>
+
+            <div className="relative flex items-center gap-3">
+              <button
+                className={`flex size-9 sm:size-11 items-center justify-center rounded-full bg-white text-[#670E10] shadow-md ring-1 ring-black/10 transition hover:scale-105 cursor-pointer relative ${!user ? "ring-2 ring-red-400 animate-pulse" : ""
+                  }`}
+                onClick={handleUserClick}
+                title={user ? "User Menu" : "Click to Login"}
+              >
+                <UserIcon />
+              </button>
+
+              {!user && (
+                <span
+                  className="hidden md:block text-base font-semibold text-[#670E10] cursor-pointer hover:underline"
+                  onClick={handleUserClick}
+                >
+                  Login
+                </span>
+              )}
+
+              {user && showUserMenu && (
+                <div
+                  className="absolute right-0 top-14 z-50 min-w-[220px] rounded-lg bg-white shadow-xl border border-gray-200 py-2"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="px-4 py-2 border-b border-gray-100">
+                    <p className="text-xs text-gray-500">Logged in as:</p>
+                    <p className="text-sm font-semibold text-gray-900 truncate">
+                      {user.email}
+                    </p>
+                  </div>
+
+                  <button
+                    onClick={() => {
+                      setShowUserMenu(false);
+                      router.push("/profile");
+                    }}
+                    className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 text-gray-700"
+                  >
+                    👤 My Profile
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setShowUserMenu(false);
+                      router.push("/admin");
+                    }}
+                    className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 text-gray-700"
+                  >
+                    🛠️ Admin Panel
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setShowUserMenu(false);
+                      signOut();
+                    }}
+                    className="w-full px-4 py-2 text-left text-sm hover:bg-red-50 text-red-600"
+                  >
+                    🚪 Logout
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
-      )}
-    </header>
+
+        {/* MOBILE MENU */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 animate-in slide-in-from-top-2 duration-200">
+            <nav className="flex flex-col p-4 gap-4">
+              {links.map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className="text-lg font-semibold text-gray-800 hover:text-red-700 py-2 border-b border-gray-50 last:border-0"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {l.label}
+                </Link>
+              ))}
+              {!user && (
+                <button
+                  onClick={(e) => {
+                    setMobileMenuOpen(false);
+                    handleUserClick(e);
+                  }}
+                  className="text-lg font-semibold text-left text-[#670E10] py-2"
+                >
+                  Login
+                </button>
+              )}
+            </nav>
+          </div>
+        )}
+      </header>
+      {/* Spacer to prevent content from being hidden behind fixed navbar */}
+      <div className="h-[60px] sm:h-[80px] lg:h-[110px]" />
+    </>
   );
 }
 
