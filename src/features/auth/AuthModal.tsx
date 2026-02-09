@@ -10,18 +10,6 @@ type AuthModalProps = {
   onClose: () => void;
 };
 
-"use client";
-
-import { useEffect, useState } from "react";
-import { createPortal } from "react-dom";
-import { supabaseBrowser } from "@/lib/supabase-browser";
-import { Button } from "@/components/ui/Button";
-
-type AuthModalProps = {
-  open: boolean;
-  onClose: () => void;
-};
-
 export function AuthModal({ open, onClose }: AuthModalProps) {
   const supabase = supabaseBrowser();
   const [mode, setMode] = useState<"login" | "signup" | "reset">("login");
