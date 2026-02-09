@@ -1109,9 +1109,10 @@ export const kyddozCollection: Product[] = [
     id: "ky-09",
     name: "Back To School Hamper",
     price: 650,
-    image: "/images/kyddoz/ky-09/school1.png",
+    image: "/images/kyddoz/ky-09/school1.jpeg",
     images: [
-      "/images/kyddoz/ky-09/school1.png",
+      "/images/kyddoz/ky-09/school1.jpeg",
+      "/images/kyddoz/ky-09/school2.jpeg",
       "/images/kyddoz/ky-09/school3.jpeg"
     ],
     brand: "kyddoz",
