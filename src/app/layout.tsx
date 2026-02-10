@@ -16,9 +16,9 @@ const display = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "GIFTING & Co.",
+  title: "Uphaar & Kyddoz",
   description:
-    "Pixel-perfect, fully responsive ecommerce UI built from Figma references.",
+    "Premium gifts and personalized products from Uphaar & Kyddoz - Making every moment special.",
 };
 
 export default function RootLayout({
