@@ -48,14 +48,11 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
   const router = useRouter();
   const supabase = supabaseBrowser();
   const { addToCart } = useCommerce();
-  const { user, requireAuth, loading: authLoading, isAuthModalOpen, openAuth } =
-    useAuth();
+  const { user } = useAuth();
 
   const [product, setProduct] = useState<Product | null>(null);
   const [related, setRelated] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
-  const [authChecked, setAuthChecked] = useState(false);
-  const [hasPromptedAuth, setHasPromptedAuth] = useState(false);
 
   const [activeImg, setActiveImg] = useState(0);
   const [qty, setQty] = useState(1);
@@ -138,23 +135,8 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
     if (redirect) router.push("/checkout");
   };
 
-  /* ================= AUTH CHECK ================= */
-  useEffect(() => {
-    if (authLoading) return;
-
-    if (user) {
-      setAuthChecked(true);
-    } else if (!hasPromptedAuth) {
-      setHasPromptedAuth(true);
-      requireAuth(() => setAuthChecked(true));
-    } else if (!isAuthModalOpen) {
-      setAuthChecked(true);
-    }
-  }, [user, authLoading, requireAuth, hasPromptedAuth, isAuthModalOpen]);
-
   /* ================= FETCH PRODUCT ================= */
   useEffect(() => {
-    if (!authChecked || !user) return;
 
     const fetchProduct = async () => {
       setLoading(true);
@@ -209,26 +191,9 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
     };
 
     fetchProduct();
-  }, [authChecked, user, params.id, router, supabase]);
+  }, [params.id, router, supabase]);
 
   /* ================= GUARDS ================= */
-  if (!authChecked || authLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        Checking authentication…
-      </div>
-    );
-  }
-
-  if (!user) {
-    return (
-      <div className="min-h-screen flex flex-col items-center justify-center gap-4">
-        <h2 className="text-2xl font-semibold">Login Required</h2>
-        <Button onClick={openAuth}>Login to View</Button>
-      </div>
-    );
-  }
-
   if (loading || !product) {
     return (
       <div className="min-h-screen flex items-center justify-center">

@@ -52,7 +52,7 @@ const toneStyles: Record<
 
 export function ProductCard({ product, tone = "home" }: ProductCardProps) {
   const router = useRouter();
-  const { user, requireAuth } = useAuth();
+  const { user } = useAuth();
   const { addToCart, wishlist, toggleWishlist } = useCommerce();
   const style = toneStyles[tone];
   const [adding, setAdding] = useState(false);
@@ -68,25 +68,19 @@ export function ProductCard({ product, tone = "home" }: ProductCardProps) {
 
   const handleViewProduct = (e: React.MouseEvent) => {
     e.stopPropagation();
-    requireAuth(() => {
-      router.push(`/products/${product.id}`);
-    });
+    router.push(`/products/${product.id}`);
   };
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.stopPropagation();
-    requireAuth(() => {
-      setAdding(true);
-      addToCart(product.id, 1);
-      setTimeout(() => setAdding(false), 800);
-    });
+    setAdding(true);
+    addToCart(product.id, 1);
+    setTimeout(() => setAdding(false), 800);
   };
 
   const handleToggleWishlist = (e: React.MouseEvent) => {
     e.stopPropagation();
-    requireAuth(() => {
-      toggleWishlist(product.id);
-    });
+    toggleWishlist(product.id);
   };
 
   return (
