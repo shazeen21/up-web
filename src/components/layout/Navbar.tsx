@@ -24,7 +24,7 @@ const iconBtn =
 const iconClass = "h-6 w-6 stroke-[1.8]";
 
 export function Navbar({ theme = "home" }: NavbarProps) {
-  const { user, openAuth, signOut } = useAuth();
+  const { user, openAuth, signOut, isAdmin } = useAuth();
   const { cart, wishlist } = useCommerce();
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
@@ -93,7 +93,7 @@ export function Navbar({ theme = "home" }: NavbarProps) {
 
           {/* LOGOS */}
           <div className="flex items-center gap-2 lg:gap-8 animate-in fade-in slide-in-from-top-4 duration-700">
-            <div className="relative h-9 w-20 sm:h-12 sm:w-24 md:h-16 md:w-32 lg:h-24 lg:w-60 hover:scale-105 transition-transform duration-300">
+            <Link href="/uphaar" className="relative h-9 w-20 sm:h-12 sm:w-24 md:h-16 md:w-32 lg:h-24 lg:w-60 hover:scale-105 transition-transform duration-300">
               <Image
                 src="/logos/uphaar.png"
                 alt="Uphaar"
@@ -101,8 +101,8 @@ export function Navbar({ theme = "home" }: NavbarProps) {
                 className="object-contain"
                 priority
               />
-            </div>
-            <div className="relative h-9 w-20 sm:h-12 sm:w-24 md:h-16 md:w-32 lg:h-24 lg:w-60 hover:scale-105 transition-transform duration-300">
+            </Link>
+            <Link href="/kyddoz" className="relative h-9 w-20 sm:h-12 sm:w-24 md:h-16 md:w-32 lg:h-24 lg:w-60 hover:scale-105 transition-transform duration-300">
               <Image
                 src="/logos/kyddoz.png"
                 alt="Kyddoz"
@@ -110,7 +110,7 @@ export function Navbar({ theme = "home" }: NavbarProps) {
                 className="object-contain"
                 priority
               />
-            </div>
+            </Link>
           </div>
 
           {/* LINKS (Desktop) */}
@@ -187,15 +187,17 @@ export function Navbar({ theme = "home" }: NavbarProps) {
                     👤 My Profile
                   </button>
 
-                  <button
-                    onClick={() => {
-                      setShowUserMenu(false);
-                      router.push("/admin");
-                    }}
-                    className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 text-gray-700"
-                  >
-                    🛠️ Admin Panel
-                  </button>
+                  {isAdmin && (
+                    <button
+                      onClick={() => {
+                        setShowUserMenu(false);
+                        router.push("/admin");
+                      }}
+                      className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 text-gray-700"
+                    >
+                      🛠️ Admin Panel
+                    </button>
+                  )}
 
                   <button
                     onClick={() => {
