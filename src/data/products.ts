@@ -751,6 +751,48 @@ export const uphaarCollection: Product[] = [
       "Ideal for frequent travellers and globe-trotters",
       "Perfect for corporate gifting and employee travel kits"
     ]
+  },
+  {
+    id: "up-11",
+    name: "Drawstring Backpack",
+    price: 0,
+    image: "/images/uphaar/up-11/image.png",
+    images: [
+      "/images/uphaar/up-11/image.png"
+    ],
+    brand: "uphaar",
+
+    features: [
+      "Premium polyester fabric with reinforced leather corners",
+      "Lightweight yet durable construction",
+      "Smooth drawstring closure for secure access",
+      "Comfortable shoulder straps for easy carrying",
+      "Suitable for travel, gym, school, sports, and daily use",
+      "Custom branding available",
+      "Size: 13.5 × 17.5 inches"
+    ]
+  },
+  {
+    id: "up-12",
+    name: "Premium Diary Gift Set",
+    price: 0,
+    image: "/images/uphaar/up-12/image.png",
+    images: [
+      "/images/uphaar/up-12/image.png"
+    ],
+    brand: "uphaar",
+
+    features: [
+      "Premium-quality diary with elegant finish",
+      "Secure magnetic closure design",
+      "Includes matching metallic pen",
+      "Smooth and durable cover material",
+      "Neatly stitched edges for long-lasting use",
+      "Comfortable writing surface",
+      "Compact and easy to carry",
+      "Custom branding, logo printing, and name engraving available",
+      "Comes in premium gift box packaging"
+    ]
   }
 ];
 
@@ -1199,6 +1241,82 @@ export const kyddozCollection: Product[] = [
           "Design 19", "Design 20", "Design 21", "Design 22", "Design 23", "Design 24",
           "Design 25", "Design 26", "Design 27", "Design 28", "Design 29", "Design 30"
         ]
+      }
+    ]
+  },
+  {
+    id: "ky-11",
+    name: "Round DIY Activity Nameplate Board",
+    price: 450,
+    image: "/images/kyddoz/ky-11/paint1.jpeg",
+    images: [
+      "/images/kyddoz/ky-11/paint1.jpeg",
+      "/images/kyddoz/ky-11/paint2.jpeg"
+    ],
+    brand: "kyddoz",
+
+    features: [
+      "Fully customizable DIY nameplate activity kit",
+      "9.5-inch MDF round base with 2-way tape backing",
+      "Includes 1 character cutout and 3 star elements",
+      "Comes with 12 paints and 1 brush",
+      "Easy paint-and-assemble creative activity for kids",
+      "Suitable for door or wall display",
+      "Packed neatly in a ready-to-gift box"
+    ],
+
+    customizationForm: [
+      {
+        name: "customName",
+        label: "Name to Print",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      },
+      {
+        name: "designNumber",
+        label: "Design Number",
+        type: "text",
+        placeholder: "Enter design number",
+        required: true
+      }
+    ]
+  },
+  {
+    id: "ky-7995",
+    name: "Premium Personalized Gift Envelopes (Set of 12)",
+    price: 450,
+    image: "/images/kyddoz/ky-12/envel.jpeg",
+    images: [
+      "/images/kyddoz/ky-12/envel.jpeg",
+      "/images/kyddoz/ky-12/envel1.jpeg"
+    ],
+    brand: "kyddoz",
+
+    features: [
+      "Personalised with family name",
+      "Crafted from high-grade cardstock",
+      "Soft-touch premium finish",
+      "Elegant modern designs with gold-speckled detailing",
+      "Suitable for weddings, Diwali, birthdays, and corporate gifting",
+      "Adds a luxurious presentation to cash or gift cards",
+      "Set of 12 envelopes"
+    ],
+
+    customizationForm: [
+      {
+        name: "customName",
+        label: "Name to Print",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      },
+      {
+        name: "designNumber",
+        label: "Design Number",
+        type: "text",
+        placeholder: "Enter design number",
+        required: true
       }
     ]
   }
