@@ -10,17 +10,17 @@ export function useProducts(brand?: Product["brand"]) {
   if (brand === "uphaar") {
     const brandFeatured = featuredProducts.filter((p) => p.brand === "uphaar");
     const regular = [...uphaarCollection].reverse();
-    return { products: [...brandFeatured, ...regular] };
+    return { products: [...regular, ...brandFeatured] };
   }
   if (brand === "kyddoz") {
     const brandFeatured = featuredProducts.filter((p) => p.brand === "kyddoz");
     const regular = [...kyddozCollection].reverse();
-    return { products: [...brandFeatured, ...regular] };
+    return { products: [...regular, ...brandFeatured] };
   }
   if (brand === "festive") {
     const brandFeatured = featuredProducts.filter((p) => p.brand === "festive");
     const regular = [...festiveCollection].reverse();
-    return { products: [...brandFeatured, ...regular] };
+    return { products: [...regular, ...brandFeatured] };
   }
 
   const allProducts: Product[] = [
