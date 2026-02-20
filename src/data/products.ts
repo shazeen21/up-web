@@ -761,7 +761,7 @@ export const uphaarCollection: Product[] = [
       "/images/uphaar/up-11/bag.JPG"
     ],
     brand: "uphaar",
-
+    customizationForm: [],
     features: [
       "Premium polyester fabric with reinforced leather corners",
       "Lightweight yet durable construction",
@@ -781,7 +781,7 @@ export const uphaarCollection: Product[] = [
       "/images/uphaar/up-12/book.JPG"
     ],
     brand: "uphaar",
-
+    customizationForm: [],
     features: [
       "Premium-quality diary with elegant finish",
       "Secure magnetic closure design",
