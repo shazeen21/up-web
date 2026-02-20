@@ -756,9 +756,9 @@ export const uphaarCollection: Product[] = [
     id: "up-11",
     name: "Drawstring Backpack",
     price: 0,
-    image: "/images/uphaar/up-11/image.png",
+    image: "/images/uphaar/up-11/bag.JPG",
     images: [
-      "/images/uphaar/up-11/image.png"
+      "/images/uphaar/up-11/bag.JPG"
     ],
     brand: "uphaar",
 
@@ -776,9 +776,9 @@ export const uphaarCollection: Product[] = [
     id: "up-12",
     name: "Premium Diary Gift Set",
     price: 0,
-    image: "/images/uphaar/up-12/image.png",
+    image: "/images/uphaar/up-12/book.JPG",
     images: [
-      "/images/uphaar/up-12/image.png"
+      "/images/uphaar/up-12/book.JPG"
     ],
     brand: "uphaar",
 

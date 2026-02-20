@@ -8,20 +8,26 @@ import {
 
 export function useProducts(brand?: Product["brand"]) {
   if (brand === "uphaar") {
-    return { products: uphaarCollection };
+    const brandFeatured = featuredProducts.filter((p) => p.brand === "uphaar");
+    const regular = [...uphaarCollection].reverse();
+    return { products: [...brandFeatured, ...regular] };
   }
   if (brand === "kyddoz") {
-    return { products: kyddozCollection };
+    const brandFeatured = featuredProducts.filter((p) => p.brand === "kyddoz");
+    const regular = [...kyddozCollection].reverse();
+    return { products: [...brandFeatured, ...regular] };
   }
   if (brand === "festive") {
-    return { products: festiveCollection };
+    const brandFeatured = featuredProducts.filter((p) => p.brand === "festive");
+    const regular = [...festiveCollection].reverse();
+    return { products: [...brandFeatured, ...regular] };
   }
 
   const allProducts: Product[] = [
     ...featuredProducts,
-    ...uphaarCollection,
-    ...kyddozCollection,
-    ...festiveCollection,
+    ...[...uphaarCollection].reverse(),
+    ...[...kyddozCollection].reverse(),
+    ...[...festiveCollection].reverse(),
   ];
 
   return { products: allProducts };
