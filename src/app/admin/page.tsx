@@ -186,11 +186,16 @@ export default function AdminPage() {
       <Navbar theme="home" />
 
       <main className="mx-auto max-w-6xl px-6 py-12 space-y-10">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-wrap gap-3">
           <h1 className="text-3xl font-semibold text-[#670E10]">Admin Panel</h1>
-          <Link href="/admin/orders">
-            <Button tone="amber">View Orders</Button>
-          </Link>
+          <div className="flex gap-2">
+            <Link href="/admin/analytics">
+              <Button tone="amber">📊 Analytics</Button>
+            </Link>
+            <Link href="/admin/orders">
+              <Button tone="amber">View Orders</Button>
+            </Link>
+          </div>
         </div>
 
         {/* EDIT MODE INDICATOR */}

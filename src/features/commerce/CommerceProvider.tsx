@@ -14,6 +14,7 @@ type CommerceContextType = {
   addToCart: (id: string, qty?: number, options?: Record<string, any>) => void;
   removeFromCart: (index: number) => void;
   toggleWishlist: (id: string) => void;
+  clearCart: () => void;
 };
 
 const CommerceContext = createContext<CommerceContextType | null>(null);
@@ -102,6 +103,10 @@ export function CommerceProvider({ children }: { children: React.ReactNode }) {
     );
   };
 
+  const clearCart = () => {
+    setCart([]);
+  };
+
   return (
     <CommerceContext.Provider
       value={{
@@ -110,6 +115,7 @@ export function CommerceProvider({ children }: { children: React.ReactNode }) {
         addToCart,
         removeFromCart,
         toggleWishlist,
+        clearCart,
       }}
     >
       {children}

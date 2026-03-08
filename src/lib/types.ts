@@ -9,6 +9,7 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      // ─── Existing Tables ──────────────────────────────────────────
       products: {
         Row: {
           id: string;
@@ -116,6 +117,69 @@ export type Database = {
         };
         Update: Partial<Database["public"]["Tables"]["profiles"]["Insert"]>;
       };
+
+      // ─── Marketing & Analytics Tables ─────────────────────────────
+      customer_behavior: {
+        Row: {
+          id: string;
+          customer_id: string | null;
+          session_id: string;
+          event_type: string;
+          product_id: string | null;
+          product_name: string | null;
+          page_url: string | null;
+          metadata: Record<string, unknown> | null;
+          created_at: string | null;
+        };
+        Insert: {
+          id?: string;
+          customer_id?: string | null;
+          session_id: string;
+          event_type: string;
+          product_id?: string | null;
+          product_name?: string | null;
+          page_url?: string | null;
+          metadata?: Record<string, unknown> | null;
+          created_at?: string | null;
+        };
+        Update: Partial<Database["public"]["Tables"]["customer_behavior"]["Insert"]>;
+      };
+      customer_analytics: {
+        Row: {
+          id: string;
+          customer_id: string;
+          last_visit: string | null;
+          segment: string | null;
+          total_sessions: number | null;
+          updated_at: string | null;
+        };
+        Insert: {
+          id?: string;
+          customer_id: string;
+          last_visit?: string | null;
+          segment?: string | null;
+          total_sessions?: number | null;
+          updated_at?: string | null;
+        };
+        Update: Partial<Database["public"]["Tables"]["customer_analytics"]["Insert"]>;
+      };
+      newsletter_subscribers: {
+        Row: {
+          id: string;
+          email: string;
+          name: string | null;
+          subscribed_at: string | null;
+          active: boolean | null;
+        };
+        Insert: {
+          id?: string;
+          email: string;
+          name?: string | null;
+          subscribed_at?: string | null;
+          active?: boolean | null;
+        };
+        Update: Partial<Database["public"]["Tables"]["newsletter_subscribers"]["Insert"]>;
+      };
     };
     Storage: {
       Buckets: {
@@ -126,4 +190,3 @@ export type Database = {
     };
   };
 };
-

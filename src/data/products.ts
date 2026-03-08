@@ -12,6 +12,8 @@ export type Product = {
   rate?: string;
   customizable?: boolean;
   features?: string[];
+  includes?: string[];
+  specifications?: Record<string, string>;
   sizes?: string[] | { label: string; size: string }[];
   colors?: { name: string; hex: string }[];
   aspect_ratio?: string;
@@ -793,6 +795,25 @@ export const uphaarCollection: Product[] = [
       "Custom branding, logo printing, and name engraving available",
       "Comes in premium gift box packaging"
     ]
+  },
+  {
+    id: "up-8652",
+    name: "Ceramic Mugs",
+    price: 0,
+    image: "/images/uphaar/up-13/ceramic.png",
+    images: [
+      "/images/uphaar/up-13/ceramic.png"
+    ],
+    brand: "uphaar",
+
+    features: [
+      "Premium high-quality ceramic mugs",
+      "High-definition and long-lasting logo print",
+      "Comfortable handle for everyday use",
+      "Suitable for coffee, tea, and other hot beverages",
+      "Ideal for corporate gifting and office desks",
+      "Perfect for branded merchandise and promotional giveaways"
+    ]
   }
 ];
 
@@ -1302,6 +1323,247 @@ export const kyddozCollection: Product[] = [
       "Adds a luxurious presentation to cash or gift cards",
       "Set of 12 envelopes"
     ],
+
+    customizationForm: [
+      {
+        name: "customName",
+        label: "Name to Print",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      },
+      {
+        name: "designNumber",
+        label: "Design Number",
+        type: "text",
+        placeholder: "Enter design number",
+        required: true
+      }
+    ]
+  },
+  {
+    id: "ky-0822",
+    name: "Personalised Cushion and Bottle Combo",
+    price: 850,
+    image: "/images/kyddoz/ky-13/cushion.png",
+    images: [
+      "/images/kyddoz/ky-13/cushion.png",
+      "/images/kyddoz/ky-13/cushion1.png"
+    ],
+    brand: "kyddoz",
+
+    features: [
+      "Personalised kids gift combo",
+      "Soft 12-inch cushion with filler included",
+      "Premium satin cushion cover with smooth finish",
+      "750 mL metal bottle – durable and easy to carry",
+      "Bright and kid-friendly designs",
+      "Option to personalise with child’s name or design"
+    ],
+
+    specifications: {
+      cushionSize: "12 inches",
+      cushionMaterial: "Satin cover",
+      filling: "Included",
+      bottleCapacity: "750 mL",
+      bottleMaterial: "Metal"
+    },
+
+    customizationForm: [
+      {
+        name: "customName",
+        label: "Name to Print",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      },
+      {
+        name: "designNumber",
+        label: "Design Number",
+        type: "text",
+        placeholder: "Enter design number",
+        required: true
+      }
+    ]
+  },
+  {
+    id: "ky-7191",
+    name: "Personalised Wall Clock",
+    price: 850,
+    image: "/images/kyddoz/ky-14/clock1.png",
+    images: [
+      "/images/kyddoz/ky-14/clock1.png",
+      "/images/kyddoz/ky-14/clock2.png",
+      "/images/kyddoz/ky-14/clock3.png"
+    ],
+    brand: "kyddoz",
+
+    features: [
+      "Fully personalised wall clock with name or custom design",
+      "Made from durable MDF material",
+      "High-quality vibrant print for a clear and attractive look",
+      "Smooth and reliable clock mechanism",
+      "Clear and easy-to-read display",
+      "Ideal for kids’ rooms, gifts, and personalised décor"
+    ],
+
+    specifications: {
+      size: "11 inches",
+      material: "MDF"
+    },
+
+    customizationForm: [
+      {
+        name: "customName",
+        label: "Name to Print",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      },
+      {
+        name: "designNumber",
+        label: "Design Number",
+        type: "text",
+        placeholder: "Enter design number",
+        required: true
+      }
+    ]
+  },
+  {
+    id: "ky-15",
+    name: "DIY Apron Painting Activity",
+    price: 520,
+    image: "/images/kyddoz/ky-15/draw1.png",
+    images: [
+      "/images/kyddoz/ky-15/draw1.png",
+      "/images/kyddoz/ky-15/draw2.png"
+    ],
+    brand: "kyddoz",
+
+    features: [
+      "Fun DIY painting activity for kids",
+      "Encourages creativity, imagination, and artistic skills",
+      "Easy and safe art activity for children",
+      "Bright 12-colour paint set for creative designs",
+      "Durable nylon apron for comfortable use",
+      "Perfect screen-free activity for kids"
+    ],
+
+    includes: [
+      "1 Nylon Apron",
+      "12 Colour Paint Set",
+      "1 Paint Brush"
+    ]
+  },
+  {
+    id: "ky-2910",
+    name: "Personalised Jute Lunch Bag",
+    price: 530,
+    image: "/images/kyddoz/ky-16/print.png",
+    images: [
+      "/images/kyddoz/ky-16/print.png",
+      "/images/kyddoz/ky-16/print2.png"
+    ],
+    brand: "kyddoz",
+
+    features: [
+      "Personalised jute lunch bag with name or custom design",
+      "Made from eco-friendly and durable jute material",
+      "Spacious interior for lunch boxes and snacks",
+      "Small inner pocket for added convenience",
+      "Lightweight, reusable, and easy to carry"
+    ],
+
+    specifications: {
+      material: "Jute",
+      size: "11 × 12 inches",
+      pocket: "Small inner pocket included"
+    },
+
+    customizationForm: [
+      {
+        name: "customName",
+        label: "Name to Print",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      },
+      {
+        name: "designNumber",
+        label: "Design Number",
+        type: "text",
+        placeholder: "Enter design number",
+        required: true
+      }
+    ]
+  },
+  {
+    id: "ky-0876",
+    name: "Personalised Tote Bag",
+    price: 330,
+    image: "/images/kyddoz/ky-17/tote.png",
+    images: [
+      "/images/kyddoz/ky-17/tote.png",
+      "/images/kyddoz/ky-17/tote2.png"
+    ],
+    brand: "kyddoz",
+
+    features: [
+      "Personalised kids tote bag with name or custom design",
+      "Made from durable laminated jute polyester material",
+      "Lightweight and easy for kids to carry",
+      "Spacious design for books, toys, snacks, or activity kits",
+      "Bright and high-quality personalised printing",
+      "Perfect for school, playdates, travel, and everyday use"
+    ],
+
+    specifications: {
+      material: "Laminated Jute Polyester",
+      size: "11 × 14 inches",
+      colour: "White"
+    },
+
+    customizationForm: [
+      {
+        name: "customName",
+        label: "Name to Print",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      },
+      {
+        name: "designNumber",
+        label: "Design Number",
+        type: "text",
+        placeholder: "Enter design number",
+        required: true
+      }
+    ]
+  },
+  {
+    id: "ky-1877",
+    name: "Personalised Drawstring Bag",
+    price: 280,
+    image: "/images/kyddoz/ky-18/draw1.png",
+    images: [
+      "/images/kyddoz/ky-18/draw1.png",
+      "/images/kyddoz/ky-18/draw2.png"
+    ],
+    brand: "kyddoz",
+
+    features: [
+      "Personalised drawstring bag with name or custom design",
+      "Made from durable nylon polyester material",
+      "Lightweight and easy to carry",
+      "Secure drawstring closure for quick access",
+      "Spacious enough for school items, sports gear, or daily essentials",
+      "Ideal for kids, school activities, travel, and gifting"
+    ],
+
+    specifications: {
+      material: "Nylon Polyester",
+      size: "11.5 × 16 inches"
+    },
 
     customizationForm: [
       {
