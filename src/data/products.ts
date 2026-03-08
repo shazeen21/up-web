@@ -1345,10 +1345,10 @@ export const kyddozCollection: Product[] = [
     id: "ky-0822",
     name: "Personalised Cushion and Bottle Combo",
     price: 850,
-    image: "/images/kyddoz/ky-13/cushion.png",
+    image: "/images/kyddoz/ky-13/cushion1.png",
     images: [
-      "/images/kyddoz/ky-13/cushion.png",
-      "/images/kyddoz/ky-13/cushion1.png"
+      "/images/kyddoz/ky-13/cushion1.png",
+      "/images/kyddoz/ky-13/cushion.png"
     ],
     brand: "kyddoz",
 
