@@ -1393,8 +1393,8 @@ export const kyddozCollection: Product[] = [
     image: "/images/kyddoz/ky-14/clock1.png",
     images: [
       "/images/kyddoz/ky-14/clock1.png",
-      "/images/kyddoz/ky-14/clock2.png",
-      "/images/kyddoz/ky-14/clock3.png"
+      "/images/kyddoz/ky-14/clock2.jpeg",
+      "/images/kyddoz/ky-14/clock3.jpeg"
     ],
     brand: "kyddoz",
 
@@ -1501,10 +1501,10 @@ export const kyddozCollection: Product[] = [
     id: "ky-0876",
     name: "Personalised Tote Bag",
     price: 330,
-    image: "/images/kyddoz/ky-17/tote.png",
+    image: "/images/kyddoz/ky-17/tote.jpeg",
     images: [
-      "/images/kyddoz/ky-17/tote.png",
-      "/images/kyddoz/ky-17/tote2.png"
+      "/images/kyddoz/ky-17/tote.jpeg",
+      "/images/kyddoz/ky-17/tote1.png"
     ],
     brand: "kyddoz",
 
@@ -1544,9 +1544,9 @@ export const kyddozCollection: Product[] = [
     id: "ky-1877",
     name: "Personalised Drawstring Bag",
     price: 280,
-    image: "/images/kyddoz/ky-18/draw1.png",
+    image: "/images/kyddoz/ky-18/draw1.jpeg",
     images: [
-      "/images/kyddoz/ky-18/draw1.png",
+      "/images/kyddoz/ky-18/draw1.jpeg",
       "/images/kyddoz/ky-18/draw2.png"
     ],
     brand: "kyddoz",
