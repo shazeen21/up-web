@@ -1348,7 +1348,7 @@ export const kyddozCollection: Product[] = [
     image: "/images/kyddoz/ky-13/cushion1.png",
     images: [
       "/images/kyddoz/ky-13/cushion1.png",
-      "/images/kyddoz/ky-13/cushion.png"
+      "/images/kyddoz/ky-13/cushion.jpeg"
     ],
     brand: "kyddoz",
 
