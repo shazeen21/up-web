@@ -62,7 +62,6 @@ export function Navbar({ theme = "home" }: NavbarProps) {
     { href: "/", label: "Home" },
     { href: "/uphaar", label: "Uphaar" },
     { href: "/kyddoz", label: "Kyddoz" },
-    { href: "/school", label: "Back to School" },
     { href: "/festive-picks", label: "Festive Picks" },
   ];
 

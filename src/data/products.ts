@@ -1128,89 +1128,7 @@ export const kyddozCollection: Product[] = [
       }
     ]
   },
-  {
-    id: "ky-08",
-    name: "Personalised Piano Folder",
-    price: 480,
-    image: "/images/kyddoz/ky-08/folder1.png",
-    images: [
-      "/images/kyddoz/ky-08/folder1.png",
-      "/images/kyddoz/ky-08/folder2.png",
-      "/images/kyddoz/ky-08/folder3.png"
-    ],
-    brand: "kyddoz",
-    features: [
-      "Personalised with name for easy identification",
-      "Expandable design with 12 partitions",
-      "Ideal for school worksheets, drawings, and assignments",
-      "Suitable for medical records or office documents",
-      "Durable plastic material",
-      "Lightweight and easy to carry",
-      "Available in assorted kid-friendly designs"
-    ],
-    customizationForm: [
-      {
-        name: "customName",
-        label: "Name to Print",
-        type: "text",
-        placeholder: "Enter name",
-        required: true
-      },
-      {
-        name: "designNumber",
-        label: "Select Design Number",
-        type: "select",
-        required: true,
-        options: [
-          "Design 1", "Design 2", "Design 3", "Design 4", "Design 5",
-          "Design 6", "Design 7", "Design 8", "Design 9"
-        ]
-      }
-    ]
-  },
-  {
-    id: "ky-09",
-    name: "Back To School Hamper",
-    price: 650,
-    image: "/images/kyddoz/ky-09/school1.jpeg",
-    images: [
-      "/images/kyddoz/ky-09/school1.jpeg",
-      "/images/kyddoz/ky-09/school2.jpeg",
-      "/images/kyddoz/ky-09/school3.jpeg"
-    ],
-    brand: "kyddoz",
-    features: [
-      "Complete stationery hamper with everyday essentials",
-      "Includes 60 waterproof stickers",
-      "64 stamp-size stickers",
-      "42 school labels",
-      "40 stationery stickers",
-      "25 gift cards",
-      "2 bag tags",
-      "Available in multiple prints",
-      "Encourages kids to label and organize school supplies",
-      "Personalised gift box ideal for back-to-school, birthdays, and return gifts"
-    ],
-    customizationForm: [
-      {
-        name: "customName",
-        label: "Name",
-        type: "text",
-        placeholder: "Enter name",
-        required: true
-      },
-      {
-        name: "designNumber",
-        label: "Select Design Number",
-        type: "select",
-        required: true,
-        options: [
-          "Design 1", "Design 2", "Design 3", "Design 4", "Design 5",
-          "Design 6", "Design 7", "Design 8", "Design 9"
-        ]
-      }
-    ]
-  },
+
   {
     id: "ky-10",
     name: "Personalised Duffle Bags",
@@ -1775,47 +1693,7 @@ export const schoolCollection: Product[] = [
       }
     ]
   },
-  {
-    id: "ky-25",
-    name: "Personalised Stainless Steel Lunch Box Set",
-    price: 550,
-    image: "/images/kyddoz/ky-25/lunchbox.jpg",
-    images: [
-      "/images/kyddoz/ky-25/lunchbox.jpg"
-    ],
-    brand: "school",
-    features: [
-      "High-quality food-grade stainless steel interior",
-      "Available in multiple sizes: Jumbo, Large, Medium",
-      "Comes with an inner mini-container",
-      "Includes a matching engraved spoon and fork set",
-      "Secure locking clips to keep food fresh",
-      "Laser-engraved custom name and elegant design (e.g., Elsa, Superheroes)"
-    ],
-    customizationForm: [
-      {
-        name: "size",
-        label: "Select Box Size",
-        type: "select",
-        required: true,
-        options: ["Medium", "Large", "Jumbo"]
-      },
-      {
-        name: "customName",
-        label: "Name to Engrave",
-        type: "text",
-        placeholder: "Enter name",
-        required: true
-      },
-      {
-        name: "theme",
-        label: "Select Theme/Design",
-        type: "select",
-        required: true,
-        options: ["Princess/Elsa", "Superheroes", "Unicorn", "Cars", "Animals", "Other"]
-      }
-    ]
-  },
+
   {
     id: "ky-24",
     name: "Back to School Hamper",
