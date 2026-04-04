@@ -955,49 +955,7 @@ export const kyddozCollection: Product[] = [
       }
     ]
   },
-  {
-    id: "ky-04",
-    name: "Personalised Veigo 7-Piece Lunch Box Set",
-    price: 1700,
-    image: "/images/kyddoz/kd-04/tiffin1.jpeg",
-    images: [
-      "/images/kyddoz/kd-04/tiffin1.jpeg",
-      "/images/kyddoz/kd-04/tiffin2.jpeg",
-      "/images/kyddoz/kd-04/tiffin3.jpeg",
-      "/images/kyddoz/kd-04/tiffin4.jpeg"
-    ],
-    brand: "kyddoz",
-    features: [
-      "Jumbo box capacity: 950 ml",
-      "Large box with vegetable compartment: 810 ml",
-      "Main compartment: 630 ml",
-      "Vegetable compartment: 180 ml",
-      "Medium box capacity: 330 ml",
-      "Includes cutlery: spoon & fork",
-      "Ideal for school, travel, and daily meals",
-      "Personalised with name and design number"
-    ],
-    customizationForm: [
-      {
-        name: "customName",
-        label: "Name to Print",
-        type: "text",
-        placeholder: "Enter name",
-        required: true
-      },
-      {
-        name: "designNumber",
-        label: "Select Design Number",
-        type: "select",
-        required: true,
-        options: [
-          "Design 1", "Design 2", "Design 3", "Design 4", "Design 5", "Design 6",
-          "Design 7", "Design 8", "Design 9", "Design 10", "Design 11", "Design 12",
-          "Design 13", "Design 14", "Design 15", "Design 16", "Design 17", "Design 18"
-        ]
-      }
-    ]
-  },
+
   {
     id: "ky-05",
     name: "2-Layered Acrylic Name Keychain",
@@ -1591,6 +1549,49 @@ export const festiveHeroSlides = [
 ];
 
 export const schoolCollection: Product[] = [
+  {
+    id: "ky-04",
+    name: "Personalised Veigo 7-Piece Lunch Box Set",
+    price: 1700,
+    image: "/images/kyddoz/kd-04/tiffin1.jpeg",
+    images: [
+      "/images/kyddoz/kd-04/tiffin1.jpeg",
+      "/images/kyddoz/kd-04/tiffin2.jpeg",
+      "/images/kyddoz/kd-04/tiffin3.jpeg",
+      "/images/kyddoz/kd-04/tiffin4.jpeg"
+    ],
+    brand: "school",
+    features: [
+      "Jumbo box capacity: 950 ml",
+      "Large box with vegetable compartment: 810 ml",
+      "Main compartment: 630 ml",
+      "Vegetable compartment: 180 ml",
+      "Medium box capacity: 330 ml",
+      "Includes cutlery: spoon & fork",
+      "Ideal for school, travel, and daily meals",
+      "Personalised with name and design number"
+    ],
+    customizationForm: [
+      {
+        name: "customName",
+        label: "Name to Print",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      },
+      {
+        name: "designNumber",
+        label: "Select Design Number",
+        type: "select",
+        required: true,
+        options: [
+          "Design 1", "Design 2", "Design 3", "Design 4", "Design 5", "Design 6",
+          "Design 7", "Design 8", "Design 9", "Design 10", "Design 11", "Design 12",
+          "Design 13", "Design 14", "Design 15", "Design 16", "Design 17", "Design 18"
+        ]
+      }
+    ]
+  },
   {
     id: "ky-28",
     name: "Personalised Matte Insulated Water Bottle",
