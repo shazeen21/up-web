@@ -32,13 +32,6 @@ const brandCards = [
     size: "normal",
     href: "/kyddoz",
   },
-  {
-    name: "Back to School",
-    logo: "/logos/kyddoz.png",
-    support: "Curated kits and supplies for early learners",
-    size: "normal",
-    href: "/school",
-  },
 ];
 
 export default function HomePage() {
@@ -97,7 +90,7 @@ export default function HomePage() {
 
       <main className="container-responsive py-10 sm:py-14 lg:py-20 space-y-16 sm:space-y-20">
         {/* BRAND CARDS */}
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-6" staggerDelay={0.15}>
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6" staggerDelay={0.15}>
           {brandCards.map((brand) => (
             <StaggerItem key={brand.name}>
               <Link href={brand.href}>
