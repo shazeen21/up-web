@@ -88,13 +88,13 @@ export default function CheckoutPage() {
           throw new Error("Supabase fetch failed");
         }
       } catch {
-        const { featuredProducts, uphaarCollection, kyddozCollection, festiveCollection } =
+        const { featuredProducts, uphaarCollection, kyddozCollection, schoolCollection, festiveCollection } =
           await import("@/data/products");
 
         const allProducts = [
           ...featuredProducts,
           ...uphaarCollection,
-          ...kyddozCollection,
+          ...kyddozCollection, ...schoolCollection, schoolCollection,
           ...festiveCollection,
         ];
 

@@ -1,7 +1,7 @@
 import {
   featuredProducts,
   uphaarCollection,
-  kyddozCollection,
+  kyddozCollection, schoolCollection,
   festiveCollection,
   Product,
 } from "@/data/products";
@@ -14,7 +14,7 @@ export function useProducts(brand?: Product["brand"]) {
   }
   if (brand === "kyddoz") {
     const brandFeatured = featuredProducts.filter((p) => p.brand === "kyddoz");
-    const regular = [...kyddozCollection].reverse();
+    const regular = [...kyddozCollection, ...schoolCollection].reverse();
     return { products: [...regular, ...brandFeatured] };
   }
   if (brand === "festive") {
@@ -26,7 +26,7 @@ export function useProducts(brand?: Product["brand"]) {
   const allProducts: Product[] = [
     ...featuredProducts,
     ...[...uphaarCollection].reverse(),
-    ...[...kyddozCollection].reverse(),
+    ...[...kyddozCollection, ...schoolCollection].reverse(),
     ...[...festiveCollection].reverse(),
   ];
 

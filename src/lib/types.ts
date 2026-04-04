@@ -16,7 +16,7 @@ export type Database = {
           name: string;
           price: number;
           description: string | null;
-          category: "uphaar" | "kyddoz" | "festive";
+          category: "uphaar" | "kyddoz" | "festive" | "school";
           images: string[] | null;
           tags: string[] | null;
           delivery_time: string | null;
@@ -31,7 +31,7 @@ export type Database = {
           name: string;
           price: number;
           description?: string | null;
-          category: "uphaar" | "kyddoz" | "festive";
+          category: "uphaar" | "kyddoz" | "festive" | "school";
           images?: string[] | null;
           tags?: string[] | null;
           delivery_time?: string | null;

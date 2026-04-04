@@ -219,6 +219,7 @@ export default function AdminPage() {
               options={[
                 { label: "Uphaar", value: "uphaar" },
                 { label: "Kyddoz", value: "kyddoz" },
+                { label: "Back to School", value: "school" },
                 { label: "Festive", value: "festive" },
               ]}
             />

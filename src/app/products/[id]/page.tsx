@@ -13,7 +13,7 @@ import {
   Product,
   featuredProducts,
   uphaarCollection,
-  kyddozCollection,
+  kyddozCollection, schoolCollection,
   festiveCollection,
 } from "@/data/products";
 import { useCommerce } from "@/features/commerce/CommerceProvider";
@@ -145,7 +145,7 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
         const allProducts = [
           ...featuredProducts,
           ...uphaarCollection,
-          ...kyddozCollection,
+          ...kyddozCollection, ...schoolCollection, schoolCollection,
           ...festiveCollection,
         ];
 

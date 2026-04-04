@@ -33,7 +33,7 @@ const getSafeJSON = (key: string, fallback: any) => {
 import {
   featuredProducts,
   uphaarCollection,
-  kyddozCollection,
+  kyddozCollection, schoolCollection,
   festiveCollection,
 } from "@/data/products";
 
@@ -51,7 +51,7 @@ export function CommerceProvider({ children }: { children: React.ReactNode }) {
     const allIds = new Set([
       ...featuredProducts.map((p) => p.id),
       ...uphaarCollection.map((p) => p.id),
-      ...kyddozCollection.map((p) => p.id),
+      ...kyddozCollection.map((p) => p.id), ...schoolCollection.map((p) => p.id),
       ...festiveCollection.map((p) => p.id),
     ]);
 

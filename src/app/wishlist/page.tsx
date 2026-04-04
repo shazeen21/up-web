@@ -49,8 +49,8 @@ export default function WishlistPage() {
       } catch (err) {
         // Fallback to static data
         console.log("Using static data for wishlist");
-        const { featuredProducts, uphaarCollection, kyddozCollection, festiveCollection } = await import("@/data/products");
-        const allProducts = [...featuredProducts, ...uphaarCollection, ...kyddozCollection, ...festiveCollection];
+        const { featuredProducts, uphaarCollection, kyddozCollection, schoolCollection, festiveCollection } = await import("@/data/products");
+        const allProducts = [...featuredProducts, ...uphaarCollection, ...kyddozCollection, ...schoolCollection, schoolCollection, ...festiveCollection];
 
         const wishlistProducts = allProducts.filter((p) => wishlist.includes(p.id));
         setProducts(wishlistProducts);
