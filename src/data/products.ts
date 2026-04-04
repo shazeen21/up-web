@@ -819,6 +819,328 @@ export const uphaarCollection: Product[] = [
 
 export const kyddozCollection: Product[] = [
   {
+    id: "ky-28",
+    name: "Personalised Matte Insulated Water Bottle",
+    price: 650,
+    image: "/images/kyddoz/ky-28/bottle1.jpg",
+    images: [
+      "/images/kyddoz/ky-28/bottle1.jpg",
+      "/images/kyddoz/ky-28/bottle2.jpg",
+      "/images/kyddoz/ky-28/bottle3.jpg"
+    ],
+    brand: "kyddoz",
+    features: [
+      "Premium matte finish in multiple elegant colours",
+      "Double-wall vacuum insulation to keep drinks hot/cold",
+      "Personalised with a gorgeous metallic script name",
+      "Durable and eco-friendly stainless steel",
+      "Perfect for adults, professionals, school, and gifting"
+    ],
+    customizationForm: [
+      {
+        name: "color",
+        label: "Select Bottle Colour",
+        type: "select",
+        required: true,
+        options: ["Matte Black", "Matte Light Pink", "Matte Dark Pink", "Matte Navy Blue"]
+      },
+      {
+        name: "customName",
+        label: "Name to Print",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      }
+    ]
+  },
+  {
+    id: "ky-27",
+    name: "Personalised Translucent Glitter Pencil Case",
+    price: 350,
+    image: "/images/kyddoz/ky-27/pouch.jpg",
+    images: [
+      "/images/kyddoz/ky-27/pouch.jpg"
+    ],
+    brand: "kyddoz",
+    features: [
+      "Stunning translucent material with a glitter finish",
+      "Personalised with your child’s name and a cute mini-icon",
+      "Available in vibrant Pink and Blue colours",
+      "Durable zipper closure and attached side loop handle",
+      "Spacious enough to easily carry all school stationery components"
+    ],
+    customizationForm: [
+      {
+        name: "color",
+        label: "Select Pouch Colour",
+        type: "select",
+        required: true,
+        options: ["Pink", "Blue"]
+      },
+      {
+        name: "customName",
+        label: "Name to Print",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      },
+      {
+        name: "theme",
+        label: "Select Theme/Icon",
+        type: "select",
+        required: true,
+        options: ["Astronaut", "Books/Study", "Superheroes", "Princess", "Other"]
+      }
+    ]
+  },
+  {
+    id: "ky-26",
+    name: "Personalised Neon Pencils (Set of 10)",
+    price: 150,
+    image: "/images/kyddoz/ky-26/pencil1.jpg",
+    images: [
+      "/images/kyddoz/ky-26/pencil1.jpg",
+      "/images/kyddoz/ky-26/pencil2.jpg"
+    ],
+    brand: "kyddoz",
+    features: [
+      "Set of 10 vibrant neon fluorescent pencils",
+      "High-quality dark lead for smooth writing",
+      "Equipped with a built-in eraser",
+      "Personalised with your child’s name prominently printed",
+      "Ideal for school, art projects, and gifting"
+    ],
+    customizationForm: [
+      {
+        name: "customName",
+        label: "Name to Print",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      }
+    ]
+  },
+  {
+    id: "ky-25",
+    name: "Personalised Stainless Steel Lunch Box Set",
+    price: 550,
+    image: "/images/kyddoz/ky-25/lunchbox.jpg",
+    images: [
+      "/images/kyddoz/ky-25/lunchbox.jpg"
+    ],
+    brand: "kyddoz",
+    features: [
+      "High-quality food-grade stainless steel interior",
+      "Available in multiple sizes: Jumbo, Large, Medium",
+      "Comes with an inner mini-container",
+      "Includes a matching engraved spoon and fork set",
+      "Secure locking clips to keep food fresh",
+      "Laser-engraved custom name and elegant design (e.g., Elsa, Superheroes)"
+    ],
+    customizationForm: [
+      {
+        name: "size",
+        label: "Select Box Size",
+        type: "select",
+        required: true,
+        options: ["Medium", "Large", "Jumbo"]
+      },
+      {
+        name: "customName",
+        label: "Name to Engrave",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      },
+      {
+        name: "theme",
+        label: "Select Theme/Design",
+        type: "select",
+        required: true,
+        options: ["Princess/Elsa", "Superheroes", "Unicorn", "Cars", "Animals", "Other"]
+      }
+    ]
+  },
+  {
+    id: "ky-24",
+    name: "Back to School Hamper",
+    price: 1150,
+    image: "/images/kyddoz/ky-24/bundle.jpg",
+    images: [
+      "/images/kyddoz/ky-24/bundle.jpg"
+    ],
+    brand: "kyddoz",
+    features: [
+      "All-in-one back to school hamper with essential labels & supplies",
+      "Includes waterproof stickers, mini stickers, book labels & stationery stickers",
+      "Comes with gift cards and bag tags for everyday use",
+      "Set of 10 pencils for school and homework",
+      "1 sturdy exam pad for smooth, comfortable writing",
+      "Helps keep books, stationery, and school items organised",
+      "Practical, ready-to-use school kit for kids"
+    ],
+    customizationForm: [
+      {
+        name: "customName",
+        label: "Name to Print",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      },
+      {
+        name: "theme",
+        label: "Select Theme/Design",
+        type: "select",
+        required: true,
+        options: ["Anime / Gojo", "Superheroes", "Princess", "Sports", "Animals", "Other"]
+      }
+    ]
+  },
+  {
+    id: "ky-23",
+    name: "Personalised Exam Board / Clipboard",
+    price: 300,
+    image: "/images/kyddoz/ky-23/board1.jpg",
+    images: [
+      "/images/kyddoz/ky-23/board1.jpg",
+      "/images/kyddoz/ky-23/board2.jpg",
+      "/images/kyddoz/ky-23/board3.jpg"
+    ],
+    brand: "kyddoz",
+    features: [
+      "High-quality writing surface",
+      "Strong metal clip to securely hold papers",
+      "Durable and lightweight material",
+      "Personalised with your child’s name",
+      "Exciting themes (Rainbow, Football, Captain America, Space/Rocket)"
+    ],
+    customizationForm: [
+      {
+        name: "customName",
+        label: "Name to Print",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      },
+      {
+        name: "theme",
+        label: "Select Theme/Design",
+        type: "select",
+        required: true,
+        options: ["Rainbow", "Football Stars", "Captain America", "Space/Rocket", "Unicorn", "Other"]
+      }
+    ]
+  },
+  {
+    id: "ky-22",
+    name: "Piano Folders",
+    price: 480,
+    image: "/images/kyddoz/ky-22/folder1.jpg",
+    images: [
+      "/images/kyddoz/ky-22/folder1.jpg",
+      "/images/kyddoz/ky-22/folder2.jpg",
+      "/images/kyddoz/ky-22/folder3.jpg"
+    ],
+    brand: "kyddoz",
+    features: [
+      "Unique piano-style folder with multiple compartments inside",
+      "Customisable — personalise with name and design",
+      "Smart storage for stationery, papers & little essentials",
+      "Keeps everything neatly organised and easy to find",
+      "Durable, lightweight, and made for everyday use"
+    ],
+    customizationForm: [
+      {
+        name: "customName",
+        label: "Name to Print",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      },
+      {
+        name: "theme",
+        label: "Select Theme/Design",
+        type: "select",
+        required: true,
+        options: ["Sports Balls", "Peacock", "Dog Man", "Other"]
+      }
+    ]
+  },
+  {
+    id: "ky-21",
+    name: "A4 Magnetic Weekly Planners",
+    price: 420,
+    image: "/images/kyddoz/ky-21/planner1.jpg",
+    images: [
+      "/images/kyddoz/ky-21/planner1.jpg",
+      "/images/kyddoz/ky-21/planner2.jpg"
+    ],
+    brand: "kyddoz",
+    features: [
+      "Customisable weekly planner",
+      "Magnetic weekly planner — easily sticks to fridge or any metal surface",
+      "Comes with marker & duster for easy write and wipe use",
+      "Reusable weekly planner for kids — perfect for everyday planning",
+      "Helps organise school schedule, activities & daily tasks",
+      "Simple, easy-to-use layout for better routine building",
+      "Ideal fridge planner for kids and families"
+    ],
+    customizationForm: [
+      {
+        name: "customName",
+        label: "Child Name to Print",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      },
+      {
+        name: "theme",
+        label: "Select Theme/Design",
+        type: "select",
+        required: true,
+        options: ["Rainbow/Hearts", "Sports/Balls", "Other"]
+      }
+    ]
+  },
+  {
+    id: "ky-20",
+    name: "Back to school labels combo",
+    price: 550,
+    image: "/images/kyddoz/ky-20/label1.jpg",
+    images: [
+      "/images/kyddoz/ky-20/label1.jpg",
+      "/images/kyddoz/ky-20/label2.jpg",
+      "/images/kyddoz/ky-20/label3.jpg"
+    ],
+    brand: "kyddoz",
+    features: [
+      "A little bit of everything, made to keep things organised",
+      "60 waterproof stickers for bottles, lunchboxes & everyday use",
+      "64 mini stamp-sized stickers for small items",
+      "42 book labels to keep school books organised",
+      "40 stationery stickers",
+      "27 gift cards for those little thoughtful gifts",
+      "2 bag tags to make school bags easy to spot",
+      "Designed for daily use, these are durable, easy to stick, and made to last through busy school days."
+    ],
+    customizationForm: [
+      {
+        name: "customName",
+        label: "Child Name to Print",
+        type: "text",
+        placeholder: "Enter name",
+        required: true
+      },
+      {
+        name: "theme",
+        label: "Select Theme/Design",
+        type: "select",
+        required: true,
+        options: ["Mermaid", "Spider-Man", "Sonic", "Barbie", "Animals", "Roblox", "Masha and the Bear", "Other"]
+      }
+    ]
+  },
+  {
     id: "ky-01",
     name: "Embroidered Personalised Egyptian Wonder Towels",
     price: 850,
@@ -1578,6 +1900,41 @@ export const kyddozCollection: Product[] = [
         label: "Design Number",
         type: "text",
         placeholder: "Enter design number",
+        required: true
+      }
+    ]
+  },
+  {
+    id: "ky-1937",
+    name: "Wooden Doorplate",
+    price: 550,
+    image: "/images/kyddoz/ky-19/door.jpeg",
+    images: [
+      "/images/kyddoz/ky-19/door.jpeg"
+    ],
+    brand: "kyddoz",
+
+    features: [
+      "Custom-crafted wooden nameplate with vibrant 3D effect",
+      "Personalised with name in bold, fun fonts",
+      "Pastel color palette to enhance room décor",
+      "High-quality durable finish",
+      "Ideal for bedroom doors, toy storage, or study corners",
+      "Perfect for kids’ rooms and gifting"
+    ],
+
+    specifications: {
+      size: "9.5 × 9.5 inches",
+      material: "MDF",
+      thickness: "5 mm"
+    },
+
+    customizationForm: [
+      {
+        name: "customName",
+        label: "Name to Print",
+        type: "text",
+        placeholder: "Enter name",
         required: true
       }
     ]
