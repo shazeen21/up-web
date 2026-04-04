@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSlider } from "@/components/ui/HeroSlider";
@@ -92,14 +92,13 @@ export default function KyddozPage() {
               </span>
             </div>
 
-            {/* Products Grid */}
-            <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {backToSchoolProducts.map((p) => (
-                <StaggerItem key={p.id}>
-                  <ProductCard product={p} tone="kyddoz" />
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
+            <div className="flex justify-center mt-8">
+              <Link href="/school">
+                <Button className="!bg-[#0B3C5D] !text-white hover:!bg-[#0B3C5D] focus:!bg-[#0B3C5D] active:!bg-[#0B3C5D] px-8 py-3 text-lg font-semibold shadow-lg transition-transform hover:scale-105">
+                  View Back to School Collection
+                </Button>
+              </Link>
+            </div>
           </section>
         </FadeIn>
       </main>
