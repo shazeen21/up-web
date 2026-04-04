@@ -8,7 +8,7 @@ import { useAuth } from "@/features/auth/AuthProvider";
 import { useCommerce } from "@/features/commerce/CommerceProvider";
 
 export type NavbarProps = {
-  theme?: "home" | "uphaar" | "kyddoz" | "festive";
+  theme?: "home" | "uphaar" | "kyddoz" | "festive" | "school";
 };
 
 const themeBg: Record<NonNullable<NavbarProps["theme"]>, string> = {
@@ -16,6 +16,7 @@ const themeBg: Record<NonNullable<NavbarProps["theme"]>, string> = {
   uphaar: "bg-[#b7c1b9] text-[#ffffff]",
   kyddoz: "bg-[#E7F5FF] text-[#0B3C5D]",
   festive: "bg-home-primary text-home-secondary",
+  school: "bg-[#E7F5FF] text-[#0B3C5D]",
 };
 
 const iconBtn =

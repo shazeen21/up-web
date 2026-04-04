@@ -94,7 +94,8 @@ export default function CheckoutPage() {
         const allProducts = [
           ...featuredProducts,
           ...uphaarCollection,
-          ...kyddozCollection, ...schoolCollection, schoolCollection,
+          ...kyddozCollection,
+          ...schoolCollection,
           ...festiveCollection,
         ];
 

@@ -12,7 +12,7 @@ import { useAuth } from "@/features/auth/AuthProvider";
 
 type ProductCardProps = {
   product: Product;
-  tone?: "home" | "uphaar" | "kyddoz" | "festive";
+  tone?: "home" | "uphaar" | "kyddoz" | "school" | "festive";
 };
 
 const toneStyles: Record<
@@ -37,6 +37,12 @@ const toneStyles: Record<
     cardBg: "#ECFFF3",
   },
   kyddoz: {
+    text: "#0B3C5D",
+    button: "#0B3C5D",
+    buttonHover: "#08314d",
+    cardBg: "#F2FAFF",
+  },
+  school: {
     text: "#0B3C5D",
     button: "#0B3C5D",
     buttonHover: "#08314d",

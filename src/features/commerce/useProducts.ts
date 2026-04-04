@@ -1,7 +1,8 @@
 import {
   featuredProducts,
   uphaarCollection,
-  kyddozCollection, schoolCollection,
+  kyddozCollection,
+  schoolCollection,
   festiveCollection,
   Product,
 } from "@/data/products";
@@ -13,9 +14,15 @@ export function useProducts(brand?: Product["brand"]) {
     return { products: [...regular, ...brandFeatured] };
   }
   if (brand === "kyddoz") {
+    // kyddoz page shows only "kyddoz" branded products
     const brandFeatured = featuredProducts.filter((p) => p.brand === "kyddoz");
-    const regular = [...kyddozCollection, ...schoolCollection].reverse();
+    const regular = [...kyddozCollection].reverse();
     return { products: [...regular, ...brandFeatured] };
+  }
+  if (brand === "school") {
+    // school/back-to-school page shows only "school" branded products
+    const regular = [...schoolCollection].reverse();
+    return { products: regular };
   }
   if (brand === "festive") {
     const brandFeatured = featuredProducts.filter((p) => p.brand === "festive");
@@ -26,9 +33,11 @@ export function useProducts(brand?: Product["brand"]) {
   const allProducts: Product[] = [
     ...featuredProducts,
     ...[...uphaarCollection].reverse(),
-    ...[...kyddozCollection, ...schoolCollection].reverse(),
+    ...[...kyddozCollection].reverse(),
+    ...[...schoolCollection].reverse(),
     ...[...festiveCollection].reverse(),
   ];
 
   return { products: allProducts };
 }
+

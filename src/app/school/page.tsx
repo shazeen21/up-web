@@ -12,11 +12,11 @@ import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/Animated"
 export default function SchoolPage() {
   const { products } = useProducts("school");
 
-  const bulkNumber = process.env.NEXT_PUBLIC_SCHOOL_WHATSAPP!;
+  const bulkNumber = process.env.NEXT_PUBLIC_KYDDOZ_WHATSAPP!;
 
   const openBulk = () => {
     const msg =
-      "Hello, I would like to place a bulk School order.%0ACustomer Name:%0APhone Number:%0AQuantity:%0ANotes:%0AOrder Type: Bulk";
+      "Hello, I would like to place a Back to School order.%0ACustomer Name:%0APhone Number:%0AQuantity:%0ANotes:%0AOrder Type: Bulk";
     window.open(
       `https://wa.me/${bulkNumber.replace("+", "")}?text=${msg}`,
       "_blank"
@@ -31,42 +31,45 @@ export default function SchoolPage() {
 
         {/* HERO */}
         <FadeIn direction="up">
-          <HeroSlider images={schoolHeroSlides} tone="school" />
+          <HeroSlider images={schoolHeroSlides} tone="kyddoz" />
         </FadeIn>
 
-        {/* ✅ BULK ORDERS SECTION (RESTORED) */}
+        {/* BULK ORDERS SECTION */}
         <FadeIn direction="up" delay={0.2}>
           <section className="rounded-3xl bg-[#E7F5FF] p-8 shadow-card">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div className="space-y-3">
                 <h2 className="text-3xl font-semibold text-[#0B3C5D]">
-                  CUSTOM HAMPERS
+                  CUSTOM SCHOOL HAMPERS
                 </h2>
                 <p className="max-w-2xl text-base text-[#0B3C5D]/80">
-                  If you have something specific in mind or would like a fully customized solution, feel free to connect with us.
+                  Want a personalised back-to-school kit for your child? Connect with us for custom hampers and bulk orders.
                 </p>
               </div>
-
               <Button
                 className="!bg-[#0B3C5D] !text-white hover:!bg-[#0B3C5D] focus:!bg-[#0B3C5D] active:!bg-[#0B3C5D]"
                 onClick={openBulk}
               >
                 CONNECT NOW
               </Button>
-
             </div>
           </section>
         </FadeIn>
 
-        {/* COLLECTION */}
+        {/* BACK TO SCHOOL COLLECTION */}
         <section>
           <FadeIn direction="up">
-            <h2 className="text-3xl font-semibold mb-4">Our Collection</h2>
+            <div className="flex items-center gap-4 mb-6">
+              <h2 className="text-3xl font-semibold">🎒 Back to School Collection</h2>
+              <span className="rounded-full bg-[#0B3C5D] px-3 py-1 text-sm font-semibold text-white">
+                {products.length} Products
+              </span>
+            </div>
           </FadeIn>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((p) => (
               <StaggerItem key={p.id}>
-                <ProductCard product={p} tone="school" />
+                <ProductCard product={p} tone="kyddoz" />
               </StaggerItem>
             ))}
           </StaggerContainer>

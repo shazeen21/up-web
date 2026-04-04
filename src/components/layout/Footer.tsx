@@ -5,7 +5,7 @@ import React from "react";
 import { Instagram, Facebook } from "lucide-react";
 
 type FooterProps = {
-  theme?: "home" | "uphaar" | "kyddoz" | "festive";
+  theme?: "home" | "uphaar" | "kyddoz" | "festive" | "school";
 };
 
 const themeStyles: Record<
@@ -16,6 +16,7 @@ const themeStyles: Record<
   uphaar: { bg: "bg-[#b7c1b9]", text: "text-[#ffffff]" },
   kyddoz: { bg: "bg-[#E7F5FF]", text: "text-[#0B3C5D]" },
   festive: { bg: "bg-home-primary", text: "text-home-secondary" },
+  school: { bg: "bg-[#E7F5FF]", text: "text-[#0B3C5D]" },
 };
 
 const socialBtn =
@@ -57,8 +58,8 @@ export function Footer({ theme = "home" }: FooterProps) {
               </div>
             )}
 
-            {/* KYDDOZ CONTACT */}
-            {theme === "kyddoz" && (
+            {/* KYDDOZ / SCHOOL CONTACT */}
+            {(theme === "kyddoz" || theme === "school") && (
               <div className="mt-2 space-y-1">
                 <p className="font-medium">kyddozworld2@gmail.com</p>
                 <p className="font-medium">+91 87671 74252</p>
@@ -90,7 +91,7 @@ export function Footer({ theme = "home" }: FooterProps) {
                   <Instagram className={iconClass} />
                 </Social>
 
-                {theme === "kyddoz" && (
+                {(theme === "kyddoz" || theme === "school") && (
                   <Social
                     href="https://www.facebook.com/KyddozPersonalisedGifting/"
                     label="Facebook"

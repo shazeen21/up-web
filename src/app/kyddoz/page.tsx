@@ -5,12 +5,15 @@ import { Footer } from "@/components/layout/Footer";
 import { HeroSlider } from "@/components/ui/HeroSlider";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { Button } from "@/components/ui/Button";
-import { kyddozHeroSlides } from "@/data/products";
+import { kyddozHeroSlides, schoolCollection } from "@/data/products";
 import { useProducts } from "@/features/commerce/useProducts";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/Animated";
 
 export default function KyddozPage() {
   const { products } = useProducts("kyddoz");
+
+  // Back to School products (ky-20 to ky-28)
+  const backToSchoolProducts = [...schoolCollection].reverse();
 
   const bulkNumber = process.env.NEXT_PUBLIC_KYDDOZ_WHATSAPP!;
 
@@ -34,7 +37,7 @@ export default function KyddozPage() {
           <HeroSlider images={kyddozHeroSlides} tone="kyddoz" />
         </FadeIn>
 
-        {/* ✅ BULK ORDERS SECTION (RESTORED) */}
+        {/* BULK ORDERS SECTION */}
         <FadeIn direction="up" delay={0.2}>
           <section className="rounded-3xl bg-[#E7F5FF] p-8 shadow-card">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
@@ -58,7 +61,7 @@ export default function KyddozPage() {
           </section>
         </FadeIn>
 
-        {/* COLLECTION */}
+        {/* KYDDOZ COLLECTION */}
         <section>
           <FadeIn direction="up">
             <h2 className="text-3xl font-semibold mb-4">Our Collection</h2>
@@ -71,6 +74,35 @@ export default function KyddozPage() {
             ))}
           </StaggerContainer>
         </section>
+
+        {/* BACK TO SCHOOL SECTION */}
+        <FadeIn direction="up">
+          <section className="space-y-6">
+            {/* Section Header */}
+            <div className="rounded-3xl bg-[#0B3C5D] px-8 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <h2 className="text-3xl font-bold text-white tracking-tight">
+                  🎒 Back to School
+                </h2>
+                <p className="text-white/70 mt-1 text-sm">
+                  Personalised school essentials — stationery, bags, labels & more
+                </p>
+              </div>
+              <span className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 text-sm font-semibold text-white ring-1 ring-white/30">
+                {backToSchoolProducts.length} Products
+              </span>
+            </div>
+
+            {/* Products Grid */}
+            <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {backToSchoolProducts.map((p) => (
+                <StaggerItem key={p.id}>
+                  <ProductCard product={p} tone="kyddoz" />
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
+          </section>
+        </FadeIn>
 
       </main>
 

@@ -1660,6 +1660,12 @@ export const kyddozHeroSlides = [
   "/images/hero/ky/3.png",
 ];
 
+export const schoolHeroSlides = [
+  "/images/hero/ky/1.png",
+  "/images/hero/ky/2.png",
+  "/images/hero/ky/3.png",
+];
+
 export const festiveHeroSlides = [
   "https://images.unsplash.com/photo-1481391478347-8c5f710ff0ac?auto=format&fit=crop&w=1600&q=80",
   "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80",

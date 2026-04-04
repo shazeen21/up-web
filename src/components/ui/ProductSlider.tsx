@@ -6,7 +6,7 @@ import { FadeIn, StaggerContainer, StaggerItem } from "./Animated";
 
 type Props = {
   items: Product[];
-  tone?: "home" | "uphaar" | "kyddoz" | "festive";
+  tone?: "home" | "uphaar" | "kyddoz" | "school" | "festive";
   title?: string;
   description?: string;
 };

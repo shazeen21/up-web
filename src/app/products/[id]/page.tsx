@@ -23,7 +23,7 @@ import { FadeIn } from "@/components/ui/Animated";
 type ProductRow = Database["public"]["Tables"]["products"]["Row"];
 
 /* ================= THEME MAP ================= */
-const themeMap = {
+const themeMap: Record<string, { bg: string; card: string; text: string; button: string }> = {
   uphaar: {
     bg: "#ffffff",
     card: "#b7c1b9",
@@ -31,6 +31,12 @@ const themeMap = {
     button: "#2b6c43",
   },
   kyddoz: {
+    bg: "#ACE4FF",
+    card: "#E9F7FF",
+    text: "#0B3C5D",
+    button: "#0B3C5D",
+  },
+  school: {
     bg: "#ACE4FF",
     card: "#E9F7FF",
     text: "#0B3C5D",
@@ -126,7 +132,7 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
       }
     }
 
-    if (redirect && product.brand === "kyddoz") {
+    if (redirect && (product.brand === "kyddoz" || product.brand === "school")) {
       handleBuyNowKyddoz();
       return;
     }
@@ -142,10 +148,11 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
       setLoading(true);
 
       try {
-        const allProducts = [
+      const allProducts = [
           ...featuredProducts,
           ...uphaarCollection,
-          ...kyddozCollection, ...schoolCollection, schoolCollection,
+          ...kyddozCollection,
+          ...schoolCollection,
           ...festiveCollection,
         ];
 
@@ -207,7 +214,7 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
 
   return (
     <div style={{ backgroundColor: theme.bg, color: theme.text }}>
-      <Navbar theme={product.brand} />
+      <Navbar theme={product.brand as "uphaar" | "kyddoz" | "school" | "festive" | "home"} />
 
       <main className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid gap-10 lg:grid-cols-2">
@@ -466,14 +473,14 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
         <section className="mt-12">
           <ProductSlider
             items={related}
-            tone={product.brand}
+            tone={product.brand as "home" | "uphaar" | "kyddoz" | "school" | "festive"}
             title="You may also like"
             description="More from this collection"
           />
         </section>
       </main>
 
-      <Footer theme={product.brand} />
+      <Footer theme={product.brand as "uphaar" | "kyddoz" | "school" | "festive" | "home"} />
     </div>
   );
 }
