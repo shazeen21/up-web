@@ -77,28 +77,33 @@ export default function KyddozPage() {
         {/* BACK TO SCHOOL SECTION */}
         <FadeIn direction="up">
           <section className="space-y-6 mt-16">
-            {/* Section Header */}
-            <div className="rounded-3xl bg-[#0B3C5D] px-8 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-              <div>
-                <h2 className="text-3xl font-bold text-white tracking-tight">
-                  🎒 Back to School
-                </h2>
-                <p className="text-white/70 mt-1 text-sm">
-                  Personalised school essentials — stationery, bags, labels & more
-                </p>
-              </div>
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 text-sm font-semibold text-white ring-1 ring-white/30">
-                {backToSchoolProducts.length} Products
-              </span>
-            </div>
+            <Link href="/school" className="block group">
+              <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-r from-[#0B3C5D] to-[#145681] p-8 sm:p-12 shadow-card transition-transform group-hover:scale-[1.02]">
+                {/* Decorative background circle */}
+                <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/5 blur-3xl transition-opacity group-hover:bg-white/10" />
+                
+                <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+                  <div className="space-y-4">
+                    <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md">
+                      <span className="h-1.5 w-1.5 rounded-full bg-blue-300 animate-pulse" />
+                      New Drop Live
+                    </div>
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                      Back to School <br className="hidden sm:block" /> Collection
+                    </h2>
+                    <p className="max-w-md text-white/80">
+                      Personalised school essentials — stationery, bags, labels, and more. Upgrade their daily gear.
+                    </p>
+                  </div>
 
-            <div className="flex justify-center mt-8">
-              <Link href="/school">
-                <Button className="!bg-[#0B3C5D] !text-white hover:!bg-[#0B3C5D] focus:!bg-[#0B3C5D] active:!bg-[#0B3C5D] px-8 py-3 text-lg font-semibold shadow-lg transition-transform hover:scale-105">
-                  View Back to School Collection
-                </Button>
-              </Link>
-            </div>
+                  <div className="shrink-0">
+                    <span className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-[#0B3C5D] shadow-lg transition-transform group-hover:translate-x-1">
+                      Shop Now <span aria-hidden="true">&rarr;</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
           </section>
         </FadeIn>
       </main>

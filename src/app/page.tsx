@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { Marquee } from "@/components/ui/Marquee";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { VideoSlider } from "@/components/ui/VideoSlider";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/Animated";
@@ -86,6 +87,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-[#f3cfc6] text-black">
+      <Marquee />
       <Navbar theme="home" />
 
       <main className="container-responsive py-10 sm:py-14 lg:py-20 space-y-16 sm:space-y-20">

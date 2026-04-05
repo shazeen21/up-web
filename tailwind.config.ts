@@ -51,6 +51,15 @@ const config: Config = {
       transitionTimingFunction: {
         "soft-spring": "cubic-bezier(0.25, 0.8, 0.25, 1)",
       },
+      animation: {
+        marquee: "marquee 20s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
     },
   },
   plugins: [],
