@@ -818,7 +818,7 @@ export const uphaarCollection: Product[] = [
 ];
 
 export const kyddozCollection: Product[] = [
-    {
+  {
     id: "ky-01",
     name: "Embroidered Personalised Egyptian Wonder Towels",
     price: 850,
@@ -1573,6 +1573,19 @@ export const schoolCollection: Product[] = [
     ],
     customizationForm: [
       {
+        name: "configuration",
+        label: "Select Configuration",
+        type: "select",
+        required: true,
+        options: [
+          "Jumbo tiffin with dibbi @₹720/-",
+          "Large tiffin without dibbi @₹520/-",
+          "Medium tiffin @₹430/-",
+          "Dibbi @₹280/-",
+          "Entire 7-piece set @₹1700/-"
+        ]
+      },
+      {
         name: "customName",
         label: "Name to Print",
         type: "text",
@@ -1594,7 +1607,7 @@ export const schoolCollection: Product[] = [
   },
   {
     id: "ky-28",
-    name: "Personalised Matte Insulated Water Bottle",
+    name: "Insulated Steel Water Bottles (500ml)",
     price: 650,
     image: "/images/kyddoz/ky-28/bottle1.jpg",
     images: [
@@ -1629,8 +1642,8 @@ export const schoolCollection: Product[] = [
   },
   {
     id: "ky-27",
-    name: "Personalised Translucent Glitter Pencil Case",
-    price: 350,
+    name: "Transparent Pencil Pouches",
+    price: 380,
     image: "/images/kyddoz/ky-27/pouch.jpg",
     images: [
       "/images/kyddoz/ky-27/pouch.jpg"
@@ -1670,7 +1683,7 @@ export const schoolCollection: Product[] = [
   {
     id: "ky-26",
     name: "Personalised Neon Pencils (Set of 10)",
-    price: 150,
+    price: 230,
     image: "/images/kyddoz/ky-26/pencil1.jpg",
     images: [
       "/images/kyddoz/ky-26/pencil1.jpg",
@@ -1733,7 +1746,7 @@ export const schoolCollection: Product[] = [
   {
     id: "ky-23",
     name: "Personalised Exam Board / Clipboard",
-    price: 300,
+    price: 390,
     image: "/images/kyddoz/ky-23/board1.jpg",
     images: [
       "/images/kyddoz/ky-23/board1.jpg",

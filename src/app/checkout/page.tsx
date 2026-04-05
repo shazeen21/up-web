@@ -137,8 +137,23 @@ export default function CheckoutPage() {
   /* ================= TOTALS ================= */
   const subtotal = useMemo(
     () =>
-      cartWithProducts.reduce(
-        (sum, item) => sum + (item.product?.price ?? 0) * item.quantity,
+      cartWithProducts.reduce
+        ((sum, item) => {
+          let itemPrice = item.product?.price ?? 0;
+          
+          if (item.options) {
+            for (const val of Object.values(item.options)) {
+              if (typeof val === "string") {
+                const match = val.match(/@₹(\d+)\/-/);
+                if (match) {
+                  itemPrice = parseInt(match[1], 10);
+                }
+              }
+            }
+          }
+
+          return sum + itemPrice * item.quantity;
+        },
         0
       ),
     [cartWithProducts]
