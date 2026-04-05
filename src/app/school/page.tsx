@@ -2,10 +2,8 @@
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { HeroSlider } from "@/components/ui/HeroSlider";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { Button } from "@/components/ui/Button";
-import { schoolHeroSlides } from "@/data/products";
 import { useProducts } from "@/features/commerce/useProducts";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/Animated";
 
@@ -29,10 +27,24 @@ export default function SchoolPage() {
 
       <main className="mx-auto max-w-6xl px-6 py-12 space-y-12">
 
-        {/* HERO */}
-        <FadeIn direction="up">
-          <HeroSlider images={schoolHeroSlides} tone="kyddoz" />
-        </FadeIn>
+        {/* BACK TO SCHOOL COLLECTION */}
+        <section>
+          <FadeIn direction="up">
+            <div className="flex items-center gap-4 mb-6">
+              <h2 className="text-3xl font-semibold">🎒 Back to School Collection</h2>
+              <span className="rounded-full bg-[#0B3C5D] px-3 py-1 text-sm font-semibold text-white">
+                {products.length} Products
+              </span>
+            </div>
+          </FadeIn>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {products.map((p) => (
+              <StaggerItem key={p.id}>
+                <ProductCard product={p} tone="kyddoz" />
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </section>
 
         {/* BULK ORDERS SECTION */}
         <FadeIn direction="up" delay={0.2}>
@@ -55,25 +67,6 @@ export default function SchoolPage() {
             </div>
           </section>
         </FadeIn>
-
-        {/* BACK TO SCHOOL COLLECTION */}
-        <section>
-          <FadeIn direction="up">
-            <div className="flex items-center gap-4 mb-6">
-              <h2 className="text-3xl font-semibold">🎒 Back to School Collection</h2>
-              <span className="rounded-full bg-[#0B3C5D] px-3 py-1 text-sm font-semibold text-white">
-                {products.length} Products
-              </span>
-            </div>
-          </FadeIn>
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products.map((p) => (
-              <StaggerItem key={p.id}>
-                <ProductCard product={p} tone="kyddoz" />
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </section>
 
       </main>
 
