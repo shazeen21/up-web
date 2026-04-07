@@ -80,7 +80,7 @@ export function Navbar({ theme = "home" }: NavbarProps) {
 
   return (
     <>
-      <header className={`${themeBg[theme]} fixed top-0 w-full z-40 border-b border-black/5 shadow-sm transition-all duration-300`}>
+      <header className={`${themeBg[theme]} sticky top-0 w-full z-40 border-b border-black/5 shadow-sm transition-all duration-300`}>
         <div className="mx-auto flex max-w-7xl items-center justify-between px-3 py-2 sm:px-4 sm:py-3 lg:px-10 lg:py-4">
 
           {/* LEFT: HAMBURGER BUTTON (Mobile/Tablet) */}
@@ -246,8 +246,6 @@ export function Navbar({ theme = "home" }: NavbarProps) {
           </div>
         )}
       </header>
-      {/* Spacer to prevent content from being hidden behind fixed navbar */}
-      <div className="h-[60px] sm:h-[80px] lg:h-[110px]" />
     </>
   );
 }

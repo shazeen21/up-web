@@ -10,7 +10,7 @@ export function Marquee() {
   if (!mounted) return null; // Avoid hydration mismatch
 
   return (
-    <Link href="/school" className="block w-full z-50 sticky top-0 bg-[#0B3C5D] text-white overflow-hidden py-2.5 cursor-pointer hover:bg-[#082a42] transition-colors duration-300">
+    <Link href="/school" className="block w-full z-50 bg-[#0B3C5D] text-white overflow-hidden py-2.5 cursor-pointer hover:bg-[#082a42] transition-colors duration-300">
       <div 
         className="flex whitespace-nowrap group text-xs sm:text-sm font-semibold tracking-widest uppercase"
       >
