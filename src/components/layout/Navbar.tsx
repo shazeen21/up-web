@@ -83,18 +83,20 @@ export function Navbar({ theme = "home" }: NavbarProps) {
       <header className={`${themeBg[theme]} fixed top-0 w-full z-40 border-b border-black/5 shadow-sm transition-all duration-300`}>
         <div className="mx-auto flex max-w-7xl items-center justify-between px-3 py-2 sm:px-4 sm:py-3 lg:px-10 lg:py-4">
 
-          {/* HAMBURGER BUTTON (Mobile/Tablet) */}
-          <button
-            className="lg:hidden p-1 -ml-1 text-current hover:opacity-80 transition-opacity"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <XIcon /> : <MenuIcon />}
-          </button>
+          {/* LEFT: HAMBURGER BUTTON (Mobile/Tablet) */}
+          <div className="flex items-center lg:hidden shrink-0">
+            <button
+              className="p-1 -ml-1 text-current hover:opacity-80 transition-opacity"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <XIcon /> : <MenuIcon />}
+            </button>
+          </div>
 
           {/* LOGOS */}
-          <div className="flex items-center gap-2 lg:gap-8 animate-in fade-in slide-in-from-top-4 duration-700">
-            <Link href="/uphaar" className="relative h-9 w-20 sm:h-12 sm:w-24 md:h-16 md:w-32 lg:h-24 lg:w-60 hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-1 lg:flex-none items-center justify-center lg:justify-start gap-1 sm:gap-2 lg:gap-8 animate-in fade-in slide-in-from-top-4 duration-700 shrink min-w-0 ml-1 mr-1 lg:ml-0 lg:mr-0">
+            <Link href="/uphaar" className="relative h-7 w-16 sm:h-12 sm:w-24 md:h-16 md:w-32 lg:h-24 lg:w-60 hover:scale-105 transition-transform duration-300">
               <Image
                 src="/logos/uphaar.png"
                 alt="Uphaar"
@@ -103,7 +105,7 @@ export function Navbar({ theme = "home" }: NavbarProps) {
                 priority
               />
             </Link>
-            <Link href="/kyddoz" className="relative h-9 w-20 sm:h-12 sm:w-24 md:h-16 md:w-32 lg:h-24 lg:w-60 hover:scale-105 transition-transform duration-300">
+            <Link href="/kyddoz" className="relative h-7 w-16 sm:h-12 sm:w-24 md:h-16 md:w-32 lg:h-24 lg:w-60 hover:scale-105 transition-transform duration-300">
               <Image
                 src="/logos/kyddoz.png"
                 alt="Kyddoz"
@@ -128,7 +130,7 @@ export function Navbar({ theme = "home" }: NavbarProps) {
           </nav>
 
           {/* ICON BUTTONS */}
-          <div className="flex items-center gap-1 sm:gap-2 lg:gap-3">
+          <div className="flex items-center gap-2 sm:gap-2 lg:gap-3 shrink-0">
             <Link href="/wishlist" className="flex size-9 sm:size-11 items-center justify-center rounded-full bg-white text-[#670E10] shadow-md ring-1 ring-black/10 transition hover:scale-105 cursor-pointer relative">
               <HeartIcon />
               {mounted && wishlistCount > 0 && (
